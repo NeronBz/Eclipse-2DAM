@@ -1,6 +1,7 @@
 package Manejo_de_ficheros_2;
 
 public class Alumno {
+	//prueba
 
 	int expediente;
 	String nombre;
