@@ -1,0 +1,30 @@
+package Ejercicios;
+
+import java.util.Random;
+
+public class NumeroRandom {
+
+	public static void main(String[] args) {
+		Random random = new Random();
+		boolean encontrado = false;
+
+		while (!encontrado) {
+			int num1 = random.nextInt(10); // Números del 0 al 9
+			int num2 = random.nextInt(10);
+
+			System.out.println("Generado: " + num1 + " y " + num2);
+
+			if (num1 == num2) {
+				System.out.println("¡Coincidencia detectada! Terminando...");
+				encontrado = true;
+				// Aquí se podría "destruir" el objeto o finalizar servicio
+			}
+
+			try {
+				Thread.sleep(250); // Pausa para visualizar mejor la salida
+			} catch (InterruptedException e) {
+				Thread.currentThread().interrupt();
+			}
+		}
+	}
+}

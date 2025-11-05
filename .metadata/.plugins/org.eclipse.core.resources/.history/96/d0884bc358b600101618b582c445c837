@@ -1,0 +1,122 @@
+package Ejercicios.Ejercicio_44;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.RandomAccessFile;
+import java.util.Scanner;
+
+public class Ej_44 {
+	public static void main(String[] args) {
+
+		boolean continuar = true;
+		Scanner sc = new Scanner(System.in);
+		Empresas empresas = new Empresas();
+
+		do {
+			System.out.println("1 - Ver datos de las empresas");
+			System.out.println("2 - Ver trabajadores");
+			System.out.println("3 - Añadir trabajador (sin nifs duplicados)");
+			System.out.println("4 - Modificar trabajador, por nif");
+			System.out.println("5 - Borrar trabajador, por nif");
+			System.out.println("6 - Salir");
+			System.out.print("Elige una opción (1-6): ");
+			int opcion = Integer.parseInt(sc.nextLine());
+
+			switch (opcion) {
+			case 1:
+				empresas.mostrarEmpresas();
+				break;
+
+			case 2:
+				try {
+					RandomAccessFile archivo = new RandomAccessFile("productosMenu.dat", "r");
+					System.out.println("\n--- LISTADO DE PRODUCTOS ---");
+
+					// Cada registro ocupa 36 bytes
+					long numRegistros = archivo.length() / 36;
+
+					if (numRegistros == 0) {
+						System.out.println("No hay productos registrados");
+					} else {
+						for (int i = 0; i < numRegistros; i++) {
+							archivo.seek(i * 36); // Ir al inicio del registro i
+
+							codigo = archivo.readInt();
+
+							byte[] nombreBytes = new byte[20];
+							archivo.read(nombreBytes);
+							nombre = new String(nombreBytes).trim();
+
+							precio = archivo.readDouble();
+							stock = archivo.readInt();
+
+							System.out.printf("Código: %d | Nombre: %-20s | Precio: %.2f € | Stock: %d\n", codigo,
+									nombre, precio, stock);
+						}
+					}
+
+					archivo.close();
+
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				break;
+
+			case 3:
+				System.out.println("\n--- MODIFICAR STOCK ---");
+				System.out.print("¿Qué producto quieres modificar? ");
+				int modProducto = Integer.parseInt(sc.nextLine());
+
+				System.out.print("¿Qué nuevo stock quieres ponerle? ");
+				int nuevoStock = Integer.parseInt(sc.nextLine());
+
+				try {
+					RandomAccessFile archivo = new RandomAccessFile("productosMenu.dat", "rw");
+
+					// Cada registro ocupa 36 bytes
+					long numRegistros = archivo.length() / 36;
+
+					boolean encontrado = false;
+
+					for (int i = 0; i < numRegistros; i++) {
+						archivo.seek(i * 36);
+						codigo = archivo.readInt();
+
+						// Si el código coincide, actualizamos el stock
+						if (codigo == modProducto) {
+							archivo.seek((i * 36) + 32); // posición exacta del campo stock (4+20+8 = 32)
+							archivo.writeInt(nuevoStock);
+							System.out.println("Stock actualizado a " + nuevoStock);
+							encontrado = true;
+							break;
+						}
+					}
+
+					if (!encontrado) {
+						System.out.println("No se encontró ningún producto con ese código");
+					}
+
+					archivo.close();
+
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+
+				break;
+
+			case 4:
+
+				break;
+			case 5:
+				System.out.println("Saliendo...");
+				continuar = false;
+				break;
+
+			default:
+				System.out.println("Opción no válida");
+			}
+		} while (continuar);
+
+	}
+
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<empresas>
+  <empresa>
+    <nie>A12345678</nie>
+    <nombre>Empresa Energética Sol</nombre>
+    <direccion>
+      <nombreVia>Calle Mayor</nombreVia>
+      <numero>45</numero>
+      <poblacion>Madrid</poblacion>
+      <cp>28013</cp>
+    </direccion>
+    <trabajadores>
+      <trabajador>
+        <nif>12345678A</nif>
+        <nombre>Juan Pérez</nombre>
+        <cargo>Ingeniero</cargo>
+      </trabajador>
+      <trabajador>
+        <nif>87654321B</nif>
+        <nombre>Ana López</nombre>
+        <cargo>Técnico</cargo>
+      </trabajador>
+    </trabajadores>
+  </empresa>
+  <empresa>
+    <nie>B87654321</nie>
+    <nombre>Empresa Energética Luna</nombre>
+    <direccion>
+      <nombreVia>Avenida del Sol</nombreVia>
+      <numero>10</numero>
+      <poblacion>Barcelona</poblacion>
+      <cp>08007</cp>
+    </direccion>
+    <trabajadores>
+      <trabajador>
+        <nif>23456789C</nif>
+        <nombre>Carlos Ruiz</nombre>
+        <cargo>Supervisor</cargo>
+      </trabajador>
+    </trabajadores>
+  </empresa>
+</empresas>
+

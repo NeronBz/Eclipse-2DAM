@@ -1,0 +1,58 @@
+package Ejercicios;
+//Raúl Blázquez Ibáñez
+
+import java.util.LinkedHashSet;
+import java.util.Scanner;
+
+public class Ejercicio_35 {
+
+	public static void main(String[] args) {
+		// Crea una aplicación con un menú de operaciones que nos permita trabajar uno
+		// de los
+		// ejercicios anteriores.
+
+		Boolean bool = true;
+		LinkedHashSet<String> niveles = new LinkedHashSet<String>();
+
+		do {
+			Scanner teclado = new Scanner(System.in);
+			System.out.println("1 - Añadir elemento");
+			System.out.println("2 - Borrar elemento");
+			System.out.println("3 - Listar");
+			System.out.println("4 - Salir");
+			System.out.println("Elige una opción del menú (1-4):");
+			int opcion = Integer.parseInt(teclado.nextLine());
+
+			switch (opcion) {
+			case 1:
+				System.out.println("¿Qué quieres añadir?: ");
+				String palabra = teclado.nextLine().toLowerCase();
+				niveles.add(palabra);
+				break;
+
+			case 2:
+				System.out.println("¿Qué quieres borrar?: ");
+				String palabra2 = teclado.nextLine().toLowerCase();
+				if (niveles.contains(palabra2)) {
+					niveles.remove(palabra2);
+				} else {
+					System.out.println("No hay ese elemento");
+				}
+				break;
+
+			case 3:
+				for (String a : niveles) {
+					System.out.println(a);
+				}
+				break;
+				
+			case 4:
+				System.out.println("Saliendo...");
+				bool = false;
+			}
+
+		} while (bool);
+
+	}
+
+}

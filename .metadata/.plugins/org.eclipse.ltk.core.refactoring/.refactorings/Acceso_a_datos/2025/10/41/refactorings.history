@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Ejercicios.Ejemplo_Binario&apos; to &apos;EjemploEscribirBinario&apos;&#x0A;- Original project: &apos;Manejo_de_Ficheros&apos;&#x0A;- Original element: &apos;Ejercicios.Ejemplo_Binario&apos;&#x0A;- Renamed element: &apos;Ejercicios.EjemploEscribirBinario&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Ejemplo_Binario&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;Ejercicios{Ejemplo_Binario.java[Ejemplo_Binario" matchStrategy="1" name="EjemploEscribirBinario" qualified="false" references="true" similarDeclarations="false" stamp="1759993485052" textual="false" version="1.0"/>
+</session>

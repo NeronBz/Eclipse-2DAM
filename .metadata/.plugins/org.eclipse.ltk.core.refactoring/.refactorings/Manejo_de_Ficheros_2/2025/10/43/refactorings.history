@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Personas.xml&apos; to &apos;Acceso_a_datos/src/Manejo_de_ficheros_2.Docs&apos;&#x0A;- Original project: &apos;Manejo_de_Ficheros_2&apos;&#x0A;- Destination element: &apos;Acceso_a_datos/src/Manejo_de_ficheros_2.Docs&apos;&#x0A;- Original element: &apos;Personas.xml&apos;" description="Copy file" destination="=Acceso_a_datos/src&lt;Manejo_de_ficheros_2.Docs" element1="Personas.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1761203078996" units="0" version="1.0"/>
+</session>

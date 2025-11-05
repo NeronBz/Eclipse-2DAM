@@ -1,0 +1,60 @@
+package Ejercicios.Ejercicio_44;
+
+import java.util.ArrayList;
+
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlType(propOrder = { "nie", "nombre", "direccion", "listaTrabajadores" })
+public class Empresa {
+	private String nie, nombre;
+	private ArrayList<Trabajador> listaTrabajadores;
+	private Direccion direccion;
+
+	public Empresa() {
+	}
+
+	public Empresa(String nie, String nombre, ArrayList<Trabajador> listaTrabajadores, Direccion direccion) {
+		super();
+		this.nie = nie;
+		this.nombre = nombre;
+		this.listaTrabajadores = listaTrabajadores;
+		this.direccion = direccion;
+	}
+
+	public String getNie() {
+		return nie;
+	}
+
+	public void setNie(String nie) {
+		this.nie = nie;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+    @XmlElementWrapper(name = "trabajadores")
+    @XmlElement(name = "trabajador")
+	public ArrayList<Trabajador> getListaTrabajadores() {
+		return listaTrabajadores;
+	}
+
+	public void setListaTrabajadores(ArrayList<Trabajador> listaTrabajadores) {
+		this.listaTrabajadores = listaTrabajadores;
+	}
+
+	public Direccion getDireccion() {
+		return direccion;
+	}
+
+	public void setDireccion(Direccion direccion) {
+		this.direccion = direccion;
+	}
+
+}

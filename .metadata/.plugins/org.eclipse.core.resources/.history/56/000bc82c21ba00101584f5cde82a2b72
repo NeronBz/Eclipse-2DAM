@@ -1,0 +1,43 @@
+package Ejercicios.Ejercicio_43;
+
+import java.io.File;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Unmarshaller;
+
+import Ejercicios.Ejercicio_42.Libreria;
+import Ejercicios.Ejercicio_42.Libro;
+
+public class Ej_43 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		File archivo=new File("src/Libreria.xml");
+		Libreria libreria=new Libreria();
+		if (archivo.exists()) {
+			try {
+				JAXBContext jaxbContext = JAXBContext.newInstance(Libreria.class);
+				Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+				libreria = (Libreria) unmarshaller.unmarshal(archivo);
+
+			} catch (JAXBException e) {
+				e.printStackTrace();
+			}
+			
+			System.out.print("Librería: " + libreria.getNombre());
+			System.out.print("Lugar: " + libreria.getLugar());
+			System.out.print("CP: " + libreria.getCp());
+			System.out.println("Libros disponibles: ");
+			for (Libro libro : libreria.getLibreria()) {
+				System.out.print("Título: "+libro.getTitulo	());
+				System.out.print("Autor: "+libro.getAutor());
+				System.out.print("Editorial: "+libro.getEditorial());
+				System.out.print("ISBN: "+libro.getIsbn());
+			}
+		} else {
+			libreria = new Libreria();
+		}
+	}
+
+}

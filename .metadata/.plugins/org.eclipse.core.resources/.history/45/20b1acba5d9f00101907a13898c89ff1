@@ -1,0 +1,30 @@
+package Ejercicios;
+
+import java.io.File;
+import java.util.Scanner;
+
+public class Ej_8 {
+
+	public static void main(String[] args) {
+		// 8. Realiza un programa que pida por teclado una ruta de carpeta y si existe
+		// muestre su
+		// contenido y el contenido de todos sus hijos tantos directos como indirectos.
+		// Tal y como
+		// muestra la imagen.
+		
+		Scanner teclado=new Scanner(System.in);
+		System.out.println("Indica ruta de carpeta: ");
+		String ruta=teclado.nextLine();
+		
+		File rutaCarpeta=new File(ruta);
+		
+		if(rutaCarpeta.exists()) {
+			File[] hijos=rutaCarpeta.listFiles();
+			for(File hijo: hijos) {
+				System.out.println(hijo);
+			}
+		}
+
+	}
+
+}

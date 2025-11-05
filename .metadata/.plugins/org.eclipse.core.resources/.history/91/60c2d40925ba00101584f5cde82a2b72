@@ -1,0 +1,34 @@
+package Ejercicios.Ejercicio_44;
+
+import java.util.ArrayList;
+
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+public class Empresas {
+	ArrayList<Empresa> listaEmpresas = new ArrayList<Empresa>();
+
+	public Empresas() {
+	}
+
+	@XmlElementWrapper(name = "listaEmpresas")
+	@XmlElement(name = "Empresa")
+	public ArrayList<Empresa> getEmpresas() {
+		return listaEmpresas;
+	}
+
+	public void setEmpresas(ArrayList<Empresa> Empresas) {
+		listaEmpresas = Empresas;
+	}
+
+	public void mostrarEmpresas() {
+		for (Empresa e : listaEmpresas)
+			System.out.println(e.toString());
+	}
+
+	public void aniadirEmpresa(Empresa e) {
+		this.listaEmpresas.add(e);
+	}
+}

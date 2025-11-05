@@ -1,0 +1,10 @@
+package Ejercicios.Ejercicio_44;
+
+import javax.xml.bind.annotation.XmlType;
+
+@XmlType(propOrder = { "NIE", "nombre", "direccion", "listaTrabajadores" })
+public class Empresa {
+	private String nie, nombre, direccion;
+	private Trabajadores listaTrabajadores;
+
+}

@@ -1,0 +1,18 @@
+package Ejercicios;
+
+import java.util.Scanner;
+
+public class Ej_8 {
+
+	public static void main(String[] args) {
+		// 8. Realiza un programa que pida por teclado una ruta de carpeta y si existe
+		// muestre su
+		// contenido y el contenido de todos sus hijos tantos directos como indirectos.
+		// Tal y como
+		// muestra la imagen.
+		
+		Scanner teclado=new Scanner(System.in);
+
+	}
+
+}

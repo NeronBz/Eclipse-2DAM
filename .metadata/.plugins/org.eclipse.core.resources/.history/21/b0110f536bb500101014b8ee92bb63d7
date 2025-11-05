@@ -1,0 +1,32 @@
+package Ejercicios;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+
+public class Ej_42 {
+
+	public static void main(String[] args) {
+		Libreria Libro1 = new Libreria();// ArrayList de Libro
+		Libro1.aniadirLibro(new Libro("En un lugar", "Juan Costa", "Casal", 2341235));
+		Libro1.aniadirLibro(new Libro("Tinieblas", "Pedro Sanz", "SM", 8716529));
+
+		Libreria libreria = new Libreria();
+		libreria.setNombre("Paqui");
+		libreria.setLugar("Navalmoral");
+		libreria.setCp("10300");
+		Libro1.mostrarLibreria();
+		System.out.println("...................");
+		try {
+			// Crear contexto JAXB
+			JAXBContext jaxbContext = JAXBContext.newInstance(Libreria.class);
+			Marshaller marshaller = jaxbContext.createMarshaller();
+			// Configuración opcional para formato legible
+			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+			// Convertir objeto a XML y mostrar en consola
+			marshaller.marshal(Libro1, System.out);
+		} catch (JAXBException e) {
+			e.printStackTrace();
+		}
+	}
+}

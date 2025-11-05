@@ -1,0 +1,34 @@
+package Ejercicios;
+
+import java.util.ArrayList;
+
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+public class Libreria {
+	ArrayList<Libro> listaLibreria = new ArrayList<Libro>();
+
+	public Libreria() {
+	}
+
+	@XmlElementWrapper(name = "listaLibreria")
+	@XmlElement(name = "Libro")
+	public ArrayList<Libro> getLibreria() {
+		return listaLibreria;
+	}
+
+	public void setLibreria(ArrayList<Libro> Libreria) {
+		listaLibreria = Libreria;
+	}
+
+	public void mostrarLibreria() {
+		for (Libro p : listaLibreria)
+			System.out.println(p.toString());
+	}
+
+	public void aniadirLibro(Libro p) {
+		this.listaLibreria.add(p);
+	}
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<section name="java.lang.Class">
+		<item key="selection" value="&#x09;&#x09;lista.put(&quot;FOL01&quot;);"/>
+		<item key="replaceBarOpen" value="true"/>
+		<list key="findhistory">
+			<item value="Libreria"/>
+			<item value="teclado"/>
+			<item value="Persona"/>
+			<item value="Personas"/>
+			<item value="paqui"/>
+			<item value="int"/>
+			<item value="archivo"/>
+			<item value="Carpeta"/>
+			<item value="String buscar"/>
+			<item value="alumnos.pu"/>
+			<item value="&#x09;&#x09;lista.put(&quot;FOL01&quot;);"/>
+			<item value="&#x09;&#x09;HashMap&lt;String, String&gt; lista = new HashMap&lt;&gt;();"/>
+			<item value="niveles"/>
+			<item value="nombres"/>
+			<item value="Scanner teclado = new Scanner(System.in);"/>
+		</list>
+		<list key="replacehistory">
+			<item value="Empresas"/>
+			<item value="sc"/>
+			<item value="Empresa"/>
+			<item value="nombre"/>
+			<item value="Libro"/>
+			<item value="Libreria"/>
+			<item value="double"/>
+			<item value="ruta"/>
+			<item value="Archivo"/>
+			<item value="alumnos"/>
+			<item value="grupos"/>
+			<item value="niveles"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="651"/>
+		<item key="DIALOG_Y_ORIGIN" value="375"/>
+	</section>
+</section>

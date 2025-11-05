@@ -1,0 +1,54 @@
+package Ejercicios.Ejercicio_44;
+
+import javax.xml.bind.annotation.XmlType;
+
+@XmlType(propOrder = { "nombreVia", "numero", "poblacion", "cp" })
+public class Direccion {
+	private String nombreVia, poblacion;
+	private int num, cp;
+
+	public Direccion() {
+
+	}
+
+	public Direccion(String nombreVia, int num, String poblacion, int cp) {
+		super();
+		this.nombreVia = nombreVia;
+		this.num = num;
+		this.poblacion = poblacion;
+		this.cp = cp;
+	}
+
+	public String getNombreVia() {
+		return nombreVia;
+	}
+
+	public void setNombreVia(String nombreVia) {
+		this.nombreVia = nombreVia;
+	}
+
+	public int getNum() {
+		return num;
+	}
+
+	public void setNum(int num) {
+		this.num = num;
+	}
+
+	public int getPoblacion() {
+		return poblacion;
+	}
+
+	public void setPoblacion(int poblacion) {
+		this.poblacion = poblacion;
+	}
+
+	public int getCp() {
+		return cp;
+	}
+
+	public void setCp(int cp) {
+		this.cp = cp;
+	}
+
+}

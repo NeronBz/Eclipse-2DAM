@@ -1,0 +1,57 @@
+package Ejercicios.Ejercicio_44;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.RandomAccessFile;
+import java.util.Scanner;
+
+public class Ej_44 {
+	public static void main(String[] args) {
+
+		boolean continuar = true;
+		Scanner sc = new Scanner(System.in);
+		Empresas empresas = new Empresas();
+
+		do {
+			System.out.println("1 - Ver datos de las empresas");
+			System.out.println("2 - Ver trabajadores");
+			System.out.println("3 - Añadir trabajador (sin nifs duplicados)");
+			System.out.println("4 - Modificar trabajador, por nif");
+			System.out.println("5 - Borrar trabajador, por nif");
+			System.out.println("6 - Salir");
+			System.out.print("Elige una opción (1-6): ");
+			int opcion = Integer.parseInt(sc.nextLine());
+
+			switch (opcion) {
+			case 1:
+				empresas.mostrarEmpresas();
+				break;
+
+			case 2:
+
+				break;
+
+			case 3:
+
+				break;
+
+			case 4:
+
+				break;
+
+			case 5:
+
+				break;
+			case 6:
+				System.out.println("Saliendo...");
+				continuar = false;
+				break;
+
+			default:
+				System.out.println("Opción no válida");
+			}
+		} while (continuar);
+
+	}
+
+}

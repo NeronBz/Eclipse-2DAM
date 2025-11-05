@@ -1,0 +1,48 @@
+package Ejercicios.GeneradorRandom;
+
+import java.io.*;
+
+public class Controlador {
+	public static void main(String[] args) {
+		try {
+			// Lanzamos el proceso Generador
+			ProcessBuilder pbGenerador = new ProcessBuilder("java", "src/Ejercicios/GeneradorRandom/Generador.java");
+			Process generador = pbGenerador.start();
+			BufferedReader generadorOut = new BufferedReader(new InputStreamReader(generador.getInputStream()));
+
+			// Lanzamos el proceso Detector
+			ProcessBuilder pbDetector = new ProcessBuilder("java", "src/Ejercicios/GeneradorRandom/Detector.java");
+			Process detector = pbDetector.start();
+			BufferedReader detectorIn = new BufferedReader(new InputStreamReader(detector.getInputStream()));
+			BufferedWriter detectorOut = new BufferedWriter(new OutputStreamWriter(detector.getOutputStream()));
+
+			String linea;
+			boolean coincidencia = false;
+
+			while (!coincidencia && (linea = generadorOut.readLine()) != null) {
+				// Enviamos la línea al detector
+				detectorOut.write(linea + "\n");
+				detectorOut.flush();
+
+				// Leemos respuesta del detector
+				String respuesta = detectorIn.readLine();
+
+				System.out.println(
+						"Controlador: Generador envió [" + linea + "]. Detector respondió [" + respuesta + "]");
+
+				if ("IGUAL".equalsIgnoreCase(respuesta)) {
+					coincidencia = true;
+				}
+			}
+
+			// Cerramos y terminamos procesos
+			generador.destroy();
+			detector.destroy();
+
+			System.out.println("Controlador: Coincidencia detectada, finalizando.");
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}

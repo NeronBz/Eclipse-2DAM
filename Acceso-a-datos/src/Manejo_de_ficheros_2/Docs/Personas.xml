@@ -1,0 +1,12 @@
+<personas>
+	<persona>
+		<id doc="DNI">37953146B</id>
+		<nombre>Juan</nombre>
+		<edad>38</edad>
+	</persona>
+	<persona>
+		<id doc="TIE">X1236263W</id>
+		<nombre>Sebas</nombre>
+		<edad>24</edad>
+	</persona>
+</personas>

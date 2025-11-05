@@ -1,0 +1,75 @@
+package Ejercicios;
+
+import java.util.ArrayList;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+public class Libreria {
+
+	private ArrayList<Libro> listaLibreria = new ArrayList<>();
+
+	// Atributos para XML
+	@XmlAttribute(name = "nombre")
+	private String paqui;
+
+	@XmlAttribute(name = "lugar")
+	private String lugar;
+
+	@XmlAttribute(name = "cp")
+	private String cp;
+
+	public Libreria() {
+		// Asignar valores por defecto para los atributos
+		this.paqui = "Paqui";
+		this.lugar = "Navalmoral";
+		this.cp = "10300";
+	}
+
+	@XmlElementWrapper(name = "listaLibreria")
+	@XmlElement(name = "Libro")
+	public ArrayList<Libro> getLibreria() {
+		return listaLibreria;
+	}
+
+	public void setLibreria(ArrayList<Libro> listaLibreria) {
+		this.listaLibreria = listaLibreria;
+	}
+
+	// Getters y setters para los atributos
+
+	public String getPaqui() {
+		return paqui;
+	}
+
+	public void setPaqui(String paqui) {
+		this.paqui = paqui;
+	}
+
+	public String getLugar() {
+		return lugar;
+	}
+
+	public void setLugar(String lugar) {
+		this.lugar = lugar;
+	}
+
+	public String getCp() {
+		return cp;
+	}
+
+	public void setCp(String cp) {
+		this.cp = cp;
+	}
+
+	public void mostrarLibreria() {
+		for (Libro p : listaLibreria)
+			System.out.println(p.toString());
+	}
+
+	public void aniadirLibro(Libro l) {
+		this.listaLibreria.add(l);
+	}
+}

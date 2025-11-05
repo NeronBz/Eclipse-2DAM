@@ -1,0 +1,52 @@
+package Ejercicios.Ejercicio_44;
+
+import javax.xml.bind.annotation.XmlType;
+
+@XmlType(propOrder = { "NIE", "nombre", "direccion", "listaTrabajadores" })
+public class Empresa {
+	private String nie, nombre, direccion;
+	private Trabajadores listaTrabajadores;
+
+	public Empresa() {
+	}
+
+	public Empresa(String nie, String nombre, String direccion, Trabajadores listaTrabajadores) {
+		this.nie = nie;
+		this.nombre = nombre;
+		this.direccion = direccion;
+		this.listaTrabajadores = listaTrabajadores;
+	}
+
+	public String getNie() {
+		return nie;
+	}
+
+	public void setNie(String nie) {
+		this.nie = nie;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getDireccion() {
+		return direccion;
+	}
+
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+
+	public Trabajadores getListaTrabajadores() {
+		return listaTrabajadores;
+	}
+
+	public void setListaTrabajadores(Trabajadores listaTrabajadores) {
+		this.listaTrabajadores = listaTrabajadores;
+	}
+
+}

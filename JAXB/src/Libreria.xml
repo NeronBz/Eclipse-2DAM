@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Libreria nombre="a" lugar="a" cp="1">
+    <listaLibreria>
+        <Libro>
+            <titulo>a</titulo>
+            <autor>a</autor>
+            <editorial>a</editorial>
+            <isbn>1</isbn>
+        </Libro>
+        <Libro>
+            <titulo>b</titulo>
+            <autor>b</autor>
+            <editorial>2</editorial>
+            <isbn>2</isbn>
+        </Libro>
+    </listaLibreria>
+</Libreria>

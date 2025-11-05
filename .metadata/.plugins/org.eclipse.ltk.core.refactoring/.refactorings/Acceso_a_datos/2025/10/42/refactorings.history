@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Ejercicios.Ejemplo3_Random&apos; to &apos;Ej_32&apos;&#x0A;- Original project: &apos;Manejo_de_Ficheros&apos;&#x0A;- Original element: &apos;Ejercicios.Ejemplo3_Random&apos;&#x0A;- Renamed element: &apos;Ejercicios.Ej_32&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Ejemplo3_Random&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;Ejercicios{Ejemplo3_Random.java[Ejemplo3_Random" matchStrategy="1" name="Ej_32" qualified="false" references="true" similarDeclarations="false" stamp="1760601893803" textual="false" version="1.0"/>
+</session>

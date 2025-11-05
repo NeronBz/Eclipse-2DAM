@@ -1,0 +1,43 @@
+package Ejercicios;
+
+import java.util.Random;
+public class NumeroRandom {
+
+
+	    private Random generador = new Random();
+	    private boolean activo = true;
+
+	    public void iniciar() {
+	        while (activo) {
+	            int num1 = generador.nextInt(1000); // puedes cambiar el rango
+	            int num2 = generador.nextInt(1000);
+
+	            System.out.println("num1: " + num1 + ", num2: " + num2);
+
+	            // Si los números coinciden, detenemos y "destruimos" el proceso
+	            if (num1 == num2) {
+	                System.out.println("Coincidencia detectada, destruyendo servicio...");
+	                destruir();
+	            }
+
+	            // Simulamos algo de tiempo entre ciclos de números
+	            try {
+	                Thread.sleep(500);
+	            } catch (InterruptedException e) {
+	                Thread.currentThread().interrupt();
+	            }
+	        }
+	    }
+
+	    public void destruir() {
+	        activo = false;
+	    }
+
+	    public static void main(String[] args) {
+	        DetectorRandom servicio = new DetectorRandom();
+	        servicio.iniciar();
+	    }
+	}
+
+
+}

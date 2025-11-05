@@ -1,0 +1,39 @@
+package Ejercicios.Ejercicio_43;
+
+import java.io.File;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Unmarshaller;
+
+import Ejercicios.Ejercicio_42.Libreria;
+import Ejercicios.Ejercicio_42.Libro;
+
+public class Ej_43 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		File archivo=new File("src/Libreria.xml");
+		Libreria libreria=new Libreria();
+		if (archivo.exists()) {
+			try {
+				JAXBContext jaxbContext = JAXBContext.newInstance(Libreria.class);
+				Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+				libreria = (Libreria) unmarshaller.unmarshal(archivo);
+
+			} catch (JAXBException e) {
+				e.printStackTrace();
+			}
+			
+			for (Libro libro : Libro.get()) {
+			    System.out.println("Empresa: " + empresa.getNombre());
+			    for (Trabajador trabajador : empresa.getListaTrabajadores()) {
+			        System.out.println("Trabajador: " + trabajador.getNombre());
+			    }
+			}
+		} else {
+			libreria = new Libreria();
+		}
+	}
+
+}

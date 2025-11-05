@@ -1,0 +1,36 @@
+package Ejercicios.GeneradorRandom;
+
+import java.io.*;
+
+public class Controlador {
+	public static void main(String[] args) throws Exception {
+		// Inicia el proceso generador
+		Process generador = new ProcessBuilder("java", "Generador").start();
+		BufferedReader generadorOut = new BufferedReader(new InputStreamReader(generador.getInputStream()));
+
+		// Inicia el proceso detector
+		Process detector = new ProcessBuilder("java", "Detector").start();
+		BufferedReader detectorIn = new BufferedReader(new InputStreamReader(detector.getInputStream()));
+		BufferedWriter detectorOut = new BufferedWriter(new OutputStreamWriter(detector.getOutputStream()));
+
+		String linea;
+		boolean igual = false;
+		while (!igual && (linea = generadorOut.readLine()) != null) {
+			// Manda los números al detector
+			detectorOut.write(linea + "\n");
+			detectorOut.flush();
+
+			// Recoge resultado del detector
+			String respuesta = detectorIn.readLine();
+			System.out.println("Controlador: Generador envió [" + linea + "] — Detector responde [" + respuesta + "]");
+			if ("IGUAL".equals(respuesta)) {
+				igual = true;
+			}
+		}
+
+		// Finaliza procesos
+		generador.destroy();
+		detector.destroy();
+		System.out.println("Controlador: Coincidencia encontrada, todo detenido.");
+	}
+}
