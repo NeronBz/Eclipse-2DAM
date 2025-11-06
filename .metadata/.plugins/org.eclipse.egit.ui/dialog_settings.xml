@@ -21,12 +21,12 @@
 			<item key="DIALOG_X_ORIGIN" value="622"/>
 			<item key="DIALOG_Y_ORIGIN" value="174"/>
 			<item key="DIALOG_WIDTH" value="613"/>
-			<item key="DIALOG_HEIGHT" value="614"/>
+			<item key="DIALOG_HEIGHT" value="550"/>
 			<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
 		</section>
 	</section>
 	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
-		<item key="MAIN_SASH_FORM_ORIENTATION_VERTICAL" value="false"/>
+		<item key="MAIN_SASH_FORM_ORIENTATION_VERTICAL" value="true"/>
 		<item key="HORIZONTAL_SASH_FORM_WEIGHT" value="500,500"/>
 		<item key="STAGING_SASH_FORM_WEIGHT" value="500,500"/>
 		<item key="sortItemState" value="false"/>
