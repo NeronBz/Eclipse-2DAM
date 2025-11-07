@@ -41,7 +41,27 @@ public class Ej_47 {
 
 			case 2:
 
-				System.out.println();
+				System.out.println("Introduce el nombre de la receta: ");
+				String nombre = sc.nextLine();
+				System.out.println("Introduce el tipo de la receta: ");
+				String tipo = sc.nextLine();
+				System.out.println("Introduce el país de la receta: ");
+				String pais = sc.nextLine();
+				System.out.println("Introduce la región de la receta: ");
+				String region = sc.nextLine();
+				boolean continuar2 = true;
+				do {
+					System.out.println("Introduce el nombre del ingrediente: ");
+					String nombreI = sc.nextLine();
+					System.out.println("Introduce el nombre de la receta: ");
+					String cantidad = sc.nextLine();
+					System.out.println("¿Quieres añadir otro ingrediente?: ");
+					String respuesta = sc.nextLine();
+					if (!respuesta.equalsIgnoreCase("si")) {
+						continuar2 = false;
+					}
+				} while (continuar2);
+
 				break;
 
 			case 3:
@@ -49,13 +69,6 @@ public class Ej_47 {
 				break;
 
 			case 4:
-
-				break;
-
-			case 5:
-
-				break;
-			case 6:
 				System.out.println("Saliendo...");
 				continuar = false;
 				break;
