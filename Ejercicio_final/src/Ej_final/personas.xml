@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<personas>
+	<persona>
+		<dni>12345678A</dni>
+		<telefono>614271134</telefono>
+		<email>juan.perez@example.com</email>
+	</persona>
+	<persona>
+		<dni>81735138B</dni>
+		<telefono>97632542</telefono>
+		<email>maria.lopez@example.com</email>
+	</persona>
+	<persona>
+		<dni>89246724C</dni>
+		<telefono>235763434</telefono>
+		<email>carlos.sanchez@example.com</email>
+	</persona>
+</personas>

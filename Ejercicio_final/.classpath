@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="/home/diurno/Descargas/Json/jackson-annotations-2.13.2.jar"/>
+	<classpathentry kind="lib" path="/home/diurno/Descargas/Json/jackson-annotations-2.18.0.jar"/>
+	<classpathentry kind="lib" path="/home/diurno/Descargas/Json/jackson-core-2.18.0.jar"/>
+	<classpathentry kind="lib" path="/home/diurno/Descargas/Json/jackson-core-2.18.0(1).jar"/>
+	<classpathentry kind="lib" path="/home/diurno/Descargas/Json/jackson-databind-2.18.0.jar"/>
+	<classpathentry kind="lib" path="/home/diurno/Descargas/Json/jackson-dataformat-xml-2.13.2.jar"/>
+	<classpathentry kind="lib" path="/home/diurno/Descargas/Json/jackson-dataformat-xml-2.18.0.jar"/>
+	<classpathentry kind="lib" path="/home/diurno/Descargas/Json/json-20220320.jar"/>
+	<classpathentry kind="lib" path="/home/diurno/Descargas/Json/stax2-api-4.2.2.jar"/>
+	<classpathentry kind="lib" path="/home/diurno/Descargas/Json/woodstox-core-6.2.6.jar"/>
+	<classpathentry kind="lib" path="/home/diurno/Descargas/Json/woodstox-core-7.0.0.jar"/>
+	<classpathentry kind="lib" path="/home/diurno/Descargas/jaxb-ri/mod/codemodel.jar"/>
+	<classpathentry kind="lib" path="/home/diurno/Descargas/jaxb-ri/mod/dtd-parser.jar"/>
+	<classpathentry kind="lib" path="/home/diurno/Descargas/jaxb-ri/mod/FastInfoset.jar"/>
+	<classpathentry kind="lib" path="/home/diurno/Descargas/jaxb-ri/mod/istack-commons-runtime.jar"/>
+	<classpathentry kind="lib" path="/home/diurno/Descargas/jaxb-ri/mod/istack-commons-tools.jar"/>
+	<classpathentry kind="lib" path="/home/diurno/Descargas/jaxb-ri/mod/javax.activation-api.jar"/>
+	<classpathentry kind="lib" path="/home/diurno/Descargas/jaxb-ri/mod/jaxb-api.jar"/>
+	<classpathentry kind="lib" path="/home/diurno/Descargas/jaxb-ri/mod/jaxb-jxc.jar"/>
+	<classpathentry kind="lib" path="/home/diurno/Descargas/jaxb-ri/mod/jaxb-runtime.jar"/>
+	<classpathentry kind="lib" path="/home/diurno/Descargas/jaxb-ri/mod/jaxb-xjc.jar"/>
+	<classpathentry kind="lib" path="/home/diurno/Descargas/jaxb-ri/mod/relaxng-datatype.jar"/>
+	<classpathentry kind="lib" path="/home/diurno/Descargas/jaxb-ri/mod/rngom.jar"/>
+	<classpathentry kind="lib" path="/home/diurno/Descargas/jaxb-ri/mod/stax-ex.jar"/>
+	<classpathentry kind="lib" path="/home/diurno/Descargas/jaxb-ri/mod/txw2.jar"/>
+	<classpathentry kind="lib" path="/home/diurno/Descargas/jaxb-ri/mod/xsom.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
