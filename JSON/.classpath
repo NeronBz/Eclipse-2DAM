@@ -6,16 +6,17 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="/home/diurno/Descargas/Json/jackson-annotations-2.13.2.jar"/>
-	<classpathentry kind="lib" path="/home/diurno/Descargas/Json/jackson-annotations-2.18.0.jar"/>
-	<classpathentry kind="lib" path="/home/diurno/Descargas/Json/jackson-core-2.18.0.jar"/>
-	<classpathentry kind="lib" path="/home/diurno/Descargas/Json/jackson-core-2.18.0(1).jar"/>
-	<classpathentry kind="lib" path="/home/diurno/Descargas/Json/jackson-databind-2.18.0.jar"/>
-	<classpathentry kind="lib" path="/home/diurno/Descargas/Json/jackson-dataformat-xml-2.13.2.jar"/>
-	<classpathentry kind="lib" path="/home/diurno/Descargas/Json/jackson-dataformat-xml-2.18.0.jar"/>
-	<classpathentry kind="lib" path="/home/diurno/Descargas/Json/json-20220320.jar"/>
-	<classpathentry kind="lib" path="/home/diurno/Descargas/Json/stax2-api-4.2.2.jar"/>
-	<classpathentry kind="lib" path="/home/diurno/Descargas/Json/woodstox-core-6.2.6.jar"/>
-	<classpathentry kind="lib" path="/home/diurno/Descargas/Json/woodstox-core-7.0.0.jar"/>
+	<classpathentry excluding="src/" kind="src" path=""/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/OneDrive/Escritorio/Trabajo/Eclipse/jackson2.18.0/jackson-annotations-2.13.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/OneDrive/Escritorio/Trabajo/Eclipse/jackson2.18.0/jackson-annotations-2.18.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/OneDrive/Escritorio/Trabajo/Eclipse/jackson2.18.0/jackson-core-2.18.0(1).jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/OneDrive/Escritorio/Trabajo/Eclipse/jackson2.18.0/jackson-core-2.18.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/OneDrive/Escritorio/Trabajo/Eclipse/jackson2.18.0/jackson-databind-2.18.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/OneDrive/Escritorio/Trabajo/Eclipse/jackson2.18.0/jackson-dataformat-xml-2.13.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/OneDrive/Escritorio/Trabajo/Eclipse/jackson2.18.0/jackson-dataformat-xml-2.18.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/OneDrive/Escritorio/Trabajo/Eclipse/jackson2.18.0/json-20220320.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/OneDrive/Escritorio/Trabajo/Eclipse/jackson2.18.0/stax2-api-4.2.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/OneDrive/Escritorio/Trabajo/Eclipse/jackson2.18.0/woodstox-core-6.2.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Usuario/OneDrive/Escritorio/Trabajo/Eclipse/jackson2.18.0/woodstox-core-7.0.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
