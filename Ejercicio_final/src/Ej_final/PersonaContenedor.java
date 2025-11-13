@@ -1,8 +1,9 @@
 package Ej_final;
 
 import java.util.List;
+import java.io.*;
 
-public class PersonaContenedor {
+public class PersonaContenedor implements Serializable {
 	private List<Persona> personas;
 
 	public List<Persona> getPersonas() {

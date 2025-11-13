@@ -31,9 +31,9 @@ public class Ej2 {
 			}
 			try (BufferedWriter bw = new BufferedWriter(new FileWriter("src/Ej_final/personas2.obj"))) {
 				for (PersonaXML p : personas.getPersonas()) {
-					bw.write("\nDNI: " + p.getDni());
-					bw.write(", Teléfono: " + p.getTelefono());
-					bw.write(", Email: " + p.getEmail());
+					bw.write("DNI: " + p.getDni() + ", ");
+					bw.write("Teléfono: " + p.getTelefono() + ", ");
+					bw.write("Email: " + p.getEmail() + "\n");
 				}
 			} catch (IOException e) {
 				// TODO Auto-generated catch block

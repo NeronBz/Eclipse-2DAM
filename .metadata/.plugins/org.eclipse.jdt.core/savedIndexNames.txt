@@ -1,9 +1,8 @@
-INDEX VERSION 1.134+C:\Users\Usuario\OneDrive\Escritorio\Trabajo\Eclipse\Eclipse-2DAM\.metadata\.plugins\org.eclipse.jdt.core
-920526549.index
-2461555211.index
+INDEX VERSION 1.134+/home/diurno/eclipse/.metadata/.plugins/org.eclipse.jdt.core
+3888339496.index
+2567467902.index
 1865797976.index
-1192739386.index
-4041403133.index
-3210618047.index
-463749660.index
-1417706905.index
+1329107133.index
+2826933354.index
+1330909607.index
+3976873463.index
