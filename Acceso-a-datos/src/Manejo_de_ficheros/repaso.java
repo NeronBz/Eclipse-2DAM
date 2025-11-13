@@ -17,6 +17,7 @@ import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.Scanner;
+import java.util.TreeMap;
 import java.util.TreeSet;
 
 
@@ -33,6 +34,7 @@ public class repaso {
     HashSet<String> casas = new HashSet<>();                     // Lista sin duplicados
     LinkedHashSet<String> niveles = new LinkedHashSet<>();       // Sin duplicados y orden de inserción
     TreeSet<String> archivos = new TreeSet<>();                  // Sin duplicados y orden natural
+    TreeMap<String, Persona> personas = new TreeMap<>();         // Clave-valor sin duplicados y orden natural
     LinkedHashMap<String, Alumno> lista = new LinkedHashMap<>(); // Clave-valor sin duplicados y orden de inserción
 
     // Ejemplo de uso de File para comprobar permisos y tipo de archivo

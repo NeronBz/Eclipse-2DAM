@@ -1,17 +1,17 @@
 {
 	"personas":[
 		{
-			"dni": "08573258-A",
+			"dni": "12345678A",
 			"nombre": "Paco",
 			"edad": 21
 		},
 		{
-			"dni": "28539258-B",
+			"dni": "81735138B",
 			"nombre": "Pepe",
 			"edad": 26
 		}, 
 		{
-			"dni": "28539258-B",
+			"dni": "89246724C",
 			"nombre": "Juan",
 			"edad": 40
 		}
