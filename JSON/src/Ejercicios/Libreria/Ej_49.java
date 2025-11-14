@@ -9,10 +9,10 @@ import java.util.Scanner;
 public class Ej_49 {
 
 	public static void main(String[] args) {
-		final String FICHERO = "datosPaqui.json";
+		String fichero = "src/Ejercicios/Libreria/datosPaqui.json";
 		ObjectMapper mapper = new ObjectMapper();
 		ArrayList<Libro> libros = new ArrayList<>();
-		File archivo = new File(FICHERO);
+		File archivo = new File(fichero);
 
 		// Leer datos si el fichero existe
 		if (archivo.exists()) {

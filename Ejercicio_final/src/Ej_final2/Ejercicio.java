@@ -24,13 +24,13 @@ public class Ejercicio {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		File archivoJSON = new File("src/personas.json");
-		File archivoXML = new File("src/personas.xml");
-		File archivo1OBJ = new File("src/persona1.obj");
-		File archivo2OBJ = new File("src/persona2.obj");
-		File archivo3OBJ = new File("src/personas.obj");
-		File contactos = new File("src/contactos.csv");
-		File telefonos = new File("src/telefonos.bin");
+		File archivoJSON = new File("src/Ej_final2_Archivos/personas.json");
+		File archivoXML = new File("src/Ej_final2_Archivos/personas.xml");
+		File archivo1OBJ = new File("src/Ej_final2_Archivos/persona1.obj");
+		File archivo2OBJ = new File("src/Ej_final2_Archivos/persona2.obj");
+		File archivo3OBJ = new File("src/Ej_final2_Archivos/personas.obj");
+		File contactos = new File("src/Ej_final2_Archivos/contactos.csv");
+		File telefonos = new File("src/Ej_final2_Archivos/telefonos.bin");
 
 		TreeMap<String, Persona> personasXML = new TreeMap<>();
 		TreeMap<String, Persona> personasJSON = new TreeMap<>();
@@ -55,7 +55,7 @@ public class Ejercicio {
 
 			case 2:
 				JAXBContext jaxbContext;
-				Personas personas = new Personas();// ArrayList de persona
+				Personas personas = new Personas();
 				try {
 					jaxbContext = JAXBContext.newInstance(Personas.class);
 					Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
@@ -74,7 +74,7 @@ public class Ejercicio {
 							Persona persona = (Persona) ois.readObject();
 							personasJSON.put(persona.getDni(), persona);
 						} catch (EOFException e) {
-							break; // fin fichero
+							break;
 						} catch (ClassNotFoundException e) {
 							System.out.println("Clase no encontrada: " + e.getMessage());
 							break;
@@ -90,7 +90,7 @@ public class Ejercicio {
 							Persona persona = (Persona) ois.readObject();
 							personasXML.put(persona.getDni(), persona);
 						} catch (EOFException e) {
-							break; // fin fichero
+							break;
 						} catch (ClassNotFoundException e) {
 							System.out.println("Clase no encontrada: " + e.getMessage());
 							break;
@@ -125,7 +125,7 @@ public class Ejercicio {
 							bw.write(persona.getNombre() + ", " + persona.getEmail());
 							bw.newLine();
 						} catch (EOFException e) {
-							break; // fin fichero
+							break;
 						} catch (ClassNotFoundException e) {
 							System.out.println("Clase no encontrada: " + e.getMessage());
 							break;
@@ -152,14 +152,14 @@ public class Ejercicio {
 							String linea = "DNI: " + persona.getDni() + ", Telefono: " + persona.getTelefono() + "\n";
 							archivo.writeBytes(linea);
 						} catch (EOFException e) {
-							break; // fin fichero
+							break;
 						} catch (ClassNotFoundException e) {
 							System.out.println("Clase no encontrada: " + e.getMessage());
 							break;
 						}
 					}
 
-					archivo.seek(0); // Ir al inicio
+					archivo.seek(0);
 
 					String linea;
 					while ((linea = archivo.readLine()) != null) {
@@ -229,7 +229,7 @@ public class Ejercicio {
 					Persona persona = (Persona) ois.readObject();
 					System.out.println(persona);
 				} catch (EOFException e) {
-					break; // fin fichero
+					break;
 				} catch (ClassNotFoundException e) {
 					System.out.println("Clase no encontrada: " + e.getMessage());
 					break;

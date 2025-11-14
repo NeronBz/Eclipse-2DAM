@@ -5,6 +5,9 @@
 		<item key="selection" value="&#x09;&#x09;lista.put(&quot;FOL01&quot;);"/>
 		<item key="replaceBarOpen" value="true"/>
 		<list key="findhistory">
+			<item value="split"/>
+			<item value="spli"/>
+			<item value="spl"/>
 			<item value="Libreria"/>
 			<item value="teclado"/>
 			<item value="Persona"/>
@@ -17,9 +20,6 @@
 			<item value="alumnos.pu"/>
 			<item value="&#x09;&#x09;lista.put(&quot;FOL01&quot;);"/>
 			<item value="&#x09;&#x09;HashMap&lt;String, String&gt; lista = new HashMap&lt;&gt;();"/>
-			<item value="niveles"/>
-			<item value="nombres"/>
-			<item value="Scanner teclado = new Scanner(System.in);"/>
 		</list>
 		<list key="replacehistory">
 			<item value="Empresas"/>
