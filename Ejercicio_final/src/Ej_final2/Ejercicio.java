@@ -144,13 +144,16 @@ public class Ejercicio {
 						RandomAccessFile archivo = new RandomAccessFile(telefonos, "rw")) {
 					archivo.setLength(0); // Limpiar archivo antes de escribir
 
+					int i = 0;
 					while (true) {
 						try {
 							Persona persona = (Persona) ois.readObject();
 							System.out.println(persona);
-							// Escribir toda la línea como texto en el fichero
-							String linea = "DNI: " + persona.getDni() + ", Telefono: " + persona.getTelefono() + "\n";
-							archivo.writeBytes(linea);
+							// Escribir
+							escribirDniYTlf(archivo, persona.getDni(), persona.getTelefono());
+							// Leer
+							leerDniYTlf(archivo, i);
+							i++;
 						} catch (EOFException e) {
 							break;
 						} catch (ClassNotFoundException e) {
@@ -159,12 +162,6 @@ public class Ejercicio {
 						}
 					}
 
-					archivo.seek(0);
-
-					String linea;
-					while ((linea = archivo.readLine()) != null) {
-						System.out.println(linea);
-					}
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
@@ -172,30 +169,27 @@ public class Ejercicio {
 				break;
 
 			case 6:
-				String telefono = null;
+				int telefono = 0;
 				System.out.println("Dime el DNI para buscar el teléfono que quieras: ");
 				String dniSolicitado = sc.nextLine();
+				int i = 0;
 				try {
 					RandomAccessFile archivo = new RandomAccessFile(telefonos, "r");
 
-					// Ir al inicio del archivo
-					archivo.seek(0);
-					// Leer el archivo línea por línea y contar la posición dinámica
-					String linea;
-					// Bucle para leer todas las líneas
-					while ((linea = archivo.readLine()) != null) {
-						if (linea.contains(dniSolicitado)) {
-							String[] partes = linea.split(","); // Separar por coma
-							for (String parte : partes) {
-								parte = parte.trim();
-								if (parte.startsWith("Telefono:")) {
-									telefono = parte.substring("telefono:".length()).trim();
-									System.out.println("Teléfono: " + telefono);
-									break;
-								}
-							}
+					archivo.seek(i);
+					while (true) {
+						// Leer el dni
+						byte[] dniBytes = new byte[9]; // creamos temporalmente un array de x bytes
+						archivo.readFully(dniBytes); // leemos ese array de byte
+						String dni = new String(dniBytes).trim(); // Eliminar espacios en blanco a derecha/izquierda
+						if (dni.equalsIgnoreCase(dniSolicitado)) {
+							telefono = archivo.readInt();
+							break;
+						} else {
+							archivo.seek((i + 13));
 						}
 					}
+					System.out.println("El teléfono de " + dniSolicitado + " es: " + telefono);
 					archivo.close();
 				} catch (IOException e) {
 					e.printStackTrace();
@@ -263,6 +257,34 @@ public class Ejercicio {
 		}
 
 		return resultado;
+	}
+
+	private static void escribirDniYTlf(RandomAccessFile archivo, String dni, int tlf) {
+		try {
+			archivo.writeBytes(dni); // Dni //writeBytes cada caracter no Unicode ocupa 1 byte
+			archivo.writeInt(tlf); // Teléfono
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	private static void leerDniYTlf(RandomAccessFile archivo, int indice) {
+		try {
+			// Mover el puntero del archivo a la posición correspondiente del registro
+			archivo.seek(indice * 13);
+
+			// Leer el dni
+			byte[] dniBytes = new byte[9]; // creamos temporalmente un array de x bytes
+			archivo.readFully(dniBytes); // leemos ese array de byte
+			String dni = new String(dniBytes).trim(); // Eliminar espacios en blanco a derecha/izquierda
+
+			int tlf = archivo.readInt();
+
+			System.out.println("DNI: " + dni);
+			System.out.println("Teléfono: " + tlf);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 }

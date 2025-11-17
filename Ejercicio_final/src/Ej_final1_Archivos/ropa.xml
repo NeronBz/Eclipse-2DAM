@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ropa>
+    <prenda>
+        <color>Azul</color>
+        <estado>Usado en buen estado</estado>
+        <nombre>Camisa de algodon</nombre>
+        <precio>20</precio>
+        <talla>M</talla>
+    </prenda>
+    <prenda>
+        <color>Negro</color>
+        <estado>Nuevo sin etiqueta</estado>
+        <nombre>Pantalones jeans</nombre>
+        <precio>30</precio>
+        <talla>L</talla>
+    </prenda>
+    <prenda>
+        <color>Rojo</color>
+        <estado>Nuevo con etiqueta</estado>
+        <nombre>Vestido</nombre>
+        <precio>45</precio>
+        <talla>S</talla>
+    </prenda>
+    <prenda>
+        <color>Gris</color>
+        <estado>Usado en buen estado</estado>
+        <nombre>Sudadera capucha</nombre>
+        <precio>50</precio>
+        <talla>L</talla>
+    </prenda>
+    <prenda>
+        <color>Verde</color>
+        <estado>Nuevo sin etiqueta</estado>
+        <nombre>Falda Larga</nombre>
+        <precio>35</precio>
+        <talla>M</talla>
+    </prenda>
+    <prenda>
+        <color>Blanco</color>
+        <estado>Usado con defectos</estado>
+        <nombre>Zapatillas deportivas</nombre>
+        <precio>60</precio>
+        <talla>42</talla>
+    </prenda>
+    <prenda>
+        <color>Negro</color>
+        <estado>Usado con defectos</estado>
+        <nombre>Chaqueta de cuero</nombre>
+        <precio>120</precio>
+        <talla>M</talla>
+    </prenda>
+    <prenda>
+        <color>Blanco</color>
+        <estado>Nuevo con etiqueta</estado>
+        <nombre>Camiseta basica</nombre>
+        <precio>15</precio>
+        <talla>XL</talla>
+    </prenda>
+    <prenda>
+        <color>Beige</color>
+        <estado>Usado en buen estado</estado>
+        <nombre>Pantalones cortos</nombre>
+        <precio>26</precio>
+        <talla>M</talla>
+    </prenda>
+    <prenda>
+        <color>Marron</color>
+        <estado>Usado con defectos</estado>
+        <nombre>Botines de cuero</nombre>
+        <precio>90</precio>
+        <talla>39</talla>
+    </prenda>
+</ropa>

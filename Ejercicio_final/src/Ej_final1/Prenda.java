@@ -31,6 +31,19 @@ public class Prenda implements Serializable {
 		this.descuento = descuento;
 	}
 
+	public Prenda(String nombre, String talla, String color, int precio, String estado) {
+		this.nombre = nombre;
+		this.talla = talla;
+		this.color = color;
+		this.precio = precio;
+		this.estado = estado;
+	}
+
+	public Prenda(int id, int precio) {
+		this.id = id;
+		this.precio = precio;
+	}
+
 	@XmlElement
 	public String getNombre() {
 		return nombre;

@@ -1,42 +1,32 @@
 package Ej_final1;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.EOFException;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.RandomAccessFile;
 import java.util.ArrayList;
-import java.util.Map;
 import java.util.Scanner;
-import java.util.TreeMap;
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Unmarshaller;
+import javax.xml.bind.*;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Ejercicio {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ClassNotFoundException {
 		Scanner sc = new Scanner(System.in);
-		File archivoJSON = new File("src/personas.json");
-		File archivoXML = new File("src/personas.xml");
 		File archivoCSV = new File("src/Ej_final1_Archivos/ropa.csv");
-		File archivoBin = new File("src/Ej_final1_Archivos/ropa.bin");
-		File archivo3OBJ = new File("src/personas.obj");
-		File contactos = new File("src/contactos.csv");
-		File telefonos = new File("src/telefonos.bin");
+		File archivoBin = new File("src/Ej_final1_Archivos/ropa.dat");
+		File precios = new File("src/Ej_final1_Archivos/precio.dat");
 
+		RopaXML ropa = new RopaXML();
+		RopaJSON ropa2 = new RopaJSON();
 		ArrayList<Prenda> p = new ArrayList<Prenda>();
-
 		ObjectMapper mapper = new ObjectMapper();
 
 		System.out.println(
@@ -59,52 +49,157 @@ public class Ejercicio {
 					}
 					br.close();
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 
 				try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(archivoBin))) {
-					for (Prenda p1 : p) {
-						oos.writeInt(p1.getId());
-						oos.writeUTF(p1.getNombre());
-						oos.writeUTF(p1.getTalla());
-						oos.writeUTF(p1.getColor());
-						oos.writeInt(p1.getStock());
-						oos.writeInt(p1.getPrecio());
-						oos.writeInt(p1.getCoste());
-						oos.writeUTF(p1.getEstado());
-						oos.writeInt(p1.getDescuento());
+					for (Prenda prenda : p) {
+						oos.writeObject(prenda);
 					}
-
 				} catch (IOException e) {
 					System.out.println("Error al escribir: " + e.getMessage());
 				}
 
-				try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(archivoBin))) {
-					Prenda prendaLeida = (Prenda) ois.readObject();
-					System.out.println("Prenda leído desde el fichero:");
-					System.out.println(prendaLeida);
-				} catch (IOException | ClassNotFoundException e) {
-					System.out.println("Error al leer: " + e.getMessage());
-				}
 			} else {
 				System.err.println("Falta el archivo");
 			}
 			break;
 
 		case 2:
+			try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(archivoBin));
+					RandomAccessFile archivo = new RandomAccessFile(precios, "rw")) {
+				archivo.setLength(0); // Limpiar archivo antes de escribir
+				int i = 0;
+				while (true) {
+					try {
+						Prenda prenda = (Prenda) ois.readObject();
+						System.out.println(prenda);
+						// Escribir
+						try {
+							archivo.writeInt(prenda.getId());
+							archivo.writeInt(prenda.getPrecio());
+							archivo.writeInt(prenda.getCoste());
+							archivo.writeInt(prenda.getDescuento());
 
+							// Mover el puntero del archivo a la posición correspondiente del registro
+							archivo.seek(i * 16);
+
+							int id = archivo.readInt();
+							int precio = archivo.readInt();
+							int coste = archivo.readInt();
+							int descuento = archivo.readInt();
+
+							System.out.println("ID: " + id);
+							System.out.println("precio: " + precio);
+							System.out.println("coste: " + coste);
+							System.out.println("descuento: " + descuento);
+						} catch (IOException e) {
+							e.printStackTrace();
+						}
+						i++;
+					} catch (EOFException e) {
+						break;
+					} catch (ClassNotFoundException e) {
+						System.out.println("Clase no encontrada: " + e.getMessage());
+						break;
+					}
+				}
+			} catch (IOException e) {
+				System.out.println("Error al leer: " + e.getMessage());
+			}
 			break;
 
 		case 3:
+			System.out.println("Dime el ID para buscar: ");
+			int idSolicitado = Integer.parseInt(sc.nextLine());
+			int beneficio = 0;
+			int i = 0;
+			try {
+				RandomAccessFile archivo = new RandomAccessFile(precios, "r");
 
+				while (true) {
+					archivo.seek(i);
+					// Leer el dni
+					int id = archivo.readInt();
+					if (id == idSolicitado) {
+						int precio = archivo.readInt();
+						int coste = archivo.readInt();
+						int descuento = archivo.readInt();
+
+						beneficio = precio - (precio * descuento / 100) - coste;
+						break;
+					} else {
+						i += 16;
+					}
+				}
+				System.out.println("El beneficio de " + idSolicitado + " es: " + beneficio);
+				archivo.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 			break;
 		case 4:
+			try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(archivoBin))) {
+				while (true) {
+					try {
+						Prenda prenda = (Prenda) ois.readObject();
+
+						// Crear DTO para solo los campos que quieres exportar y añadirlo a ropa
+						PrendaXML px = new PrendaXML(prenda.getNombre(), prenda.getTalla(), prenda.getColor(),
+								prenda.getPrecio(), prenda.getEstado());
+
+						ropa.aniadirPrenda(px);
+
+						System.out.println(prenda);
+
+					} catch (EOFException e) {
+						break; // Fin normal de lectura
+					} catch (ClassNotFoundException e) {
+						System.out.println("Clase no encontrada: " + e.getMessage());
+						break;
+					}
+				}
+
+			} catch (IOException e) {
+				System.out.println("Error al leer: " + e.getMessage());
+			}
+
+			try {
+				JAXBContext jaxbContext = JAXBContext.newInstance(RopaXML.class);
+				Marshaller marshaller = jaxbContext.createMarshaller();
+				marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+				marshaller.marshal(ropa, new File("src/Ej_final1_Archivos/ropa.xml"));
+			} catch (JAXBException e) {
+				e.printStackTrace();
+			}
 
 			break;
 
 		case 5:
+			try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(archivoBin))) {
+				while (true) {
+					try {
+						Prenda prenda = (Prenda) ois.readObject();
+						PrendaJSON pj = new PrendaJSON(prenda.getId(), prenda.getPrecio());
+						System.out.println(ropa);
 
+						ropa2.aniadirPrenda(pj);
+					} catch (EOFException e) {
+						break; // Fin normal de lectura
+					} catch (ClassNotFoundException e) {
+						System.out.println("Clase no encontrada: " + e.getMessage());
+						break;
+					}
+				}
+			} catch (IOException e) {
+				System.out.println("Error al leer: " + e.getMessage());
+			}
+			try {
+				mapper.writeValue(new File("src/Ej_final1_Archivos/ropa.json"), ropa2.getListaRopaJson());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			break;
 
 		default:

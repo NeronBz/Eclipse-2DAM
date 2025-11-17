@@ -36,6 +36,15 @@ public class repaso {
     TreeSet<String> archivos = new TreeSet<>();                  // Sin duplicados y orden natural
     TreeMap<String, Persona> personas = new TreeMap<>();         // Clave-valor sin duplicados y orden natural
     LinkedHashMap<String, Alumno> lista = new LinkedHashMap<>(); // Clave-valor sin duplicados y orden de inserción
+    
+    boolean - 1 byte
+    char - 2 bytes
+    byte - 1 byte
+    short - 2 bytes
+    int - 4 bytes
+    float - 4 bytes
+    long - 8 bytes
+    double - 8 bytes
 
     // Ejemplo de uso de File para comprobar permisos y tipo de archivo
     public void mostrarPermisosYTipo(File[] archivos) {
