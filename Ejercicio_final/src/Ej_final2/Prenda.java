@@ -1,4 +1,4 @@
-package Ej_final1;
+package Ej_final2;
 
 import java.io.Serializable;
 import javax.xml.bind.annotation.XmlElement;

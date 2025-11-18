@@ -1,0 +1,22 @@
+{
+  "recetas": [
+    {
+      "nombre": "Paella",
+      "tipo": "Arroz",
+      "origen": {
+        "pais": "España",
+        "region": "Valencia"
+      },
+      "ingredientes": [
+        {
+          "nombre": "Arroz",
+          "cantidad": "300g"
+        },
+        {
+          "nombre": "Pollo",
+          "cantidad": "250g"
+        }
+      ]
+    }
+  ]
+}
