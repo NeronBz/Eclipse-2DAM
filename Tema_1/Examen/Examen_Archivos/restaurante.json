@@ -1,0 +1,256 @@
+[ {
+  "id" : 1,
+  "tiempoEntrega" : 25,
+  "numPedidos" : 1500,
+  "valoracion" : 4.2
+}, {
+  "id" : 3,
+  "tiempoEntrega" : 32,
+  "numPedidos" : 980,
+  "valoracion" : 4.5
+}, {
+  "id" : 5,
+  "tiempoEntrega" : 28,
+  "numPedidos" : 720,
+  "valoracion" : 4.7
+}, {
+  "id" : 7,
+  "tiempoEntrega" : 40,
+  "numPedidos" : 650,
+  "valoracion" : 4.1
+}, {
+  "id" : 9,
+  "tiempoEntrega" : 30,
+  "numPedidos" : 1120,
+  "valoracion" : 4.3
+}, {
+  "id" : 10,
+  "tiempoEntrega" : 45,
+  "numPedidos" : 540,
+  "valoracion" : 4.0
+}, {
+  "id" : 12,
+  "tiempoEntrega" : 35,
+  "numPedidos" : 890,
+  "valoracion" : 4.8
+}, {
+  "id" : 13,
+  "tiempoEntrega" : 38,
+  "numPedidos" : 1050,
+  "valoracion" : 4.6
+}, {
+  "id" : 15,
+  "tiempoEntrega" : 22,
+  "numPedidos" : 760,
+  "valoracion" : 4.1
+}, {
+  "id" : 16,
+  "tiempoEntrega" : 27,
+  "numPedidos" : 1300,
+  "valoracion" : 4.4
+}, {
+  "id" : 18,
+  "tiempoEntrega" : 20,
+  "numPedidos" : 580,
+  "valoracion" : 4.0
+}, {
+  "id" : 19,
+  "tiempoEntrega" : 26,
+  "numPedidos" : 1020,
+  "valoracion" : 4.3
+}, {
+  "id" : 21,
+  "tiempoEntrega" : 33,
+  "numPedidos" : 920,
+  "valoracion" : 4.2
+}, {
+  "id" : 22,
+  "tiempoEntrega" : 50,
+  "numPedidos" : 450,
+  "valoracion" : 4.7
+}, {
+  "id" : 23,
+  "tiempoEntrega" : 15,
+  "numPedidos" : 1500,
+  "valoracion" : 4.5
+}, {
+  "id" : 25,
+  "tiempoEntrega" : 29,
+  "numPedidos" : 600,
+  "valoracion" : 4.8
+}, {
+  "id" : 27,
+  "tiempoEntrega" : 31,
+  "numPedidos" : 700,
+  "valoracion" : 4.1
+}, {
+  "id" : 29,
+  "tiempoEntrega" : 24,
+  "numPedidos" : 820,
+  "valoracion" : 4.9
+}, {
+  "id" : 30,
+  "tiempoEntrega" : 37,
+  "numPedidos" : 730,
+  "valoracion" : 4.6
+}, {
+  "id" : 32,
+  "tiempoEntrega" : 42,
+  "numPedidos" : 610,
+  "valoracion" : 4.4
+}, {
+  "id" : 33,
+  "tiempoEntrega" : 18,
+  "numPedidos" : 910,
+  "valoracion" : 4.0
+}, {
+  "id" : 35,
+  "tiempoEntrega" : 34,
+  "numPedidos" : 780,
+  "valoracion" : 4.7
+}, {
+  "id" : 36,
+  "tiempoEntrega" : 25,
+  "numPedidos" : 850,
+  "valoracion" : 4.1
+}, {
+  "id" : 38,
+  "tiempoEntrega" : 39,
+  "numPedidos" : 640,
+  "valoracion" : 4.5
+}, {
+  "id" : 40,
+  "tiempoEntrega" : 28,
+  "numPedidos" : 990,
+  "valoracion" : 4.2
+}, {
+  "id" : 41,
+  "tiempoEntrega" : 44,
+  "numPedidos" : 570,
+  "valoracion" : 4.6
+}, {
+  "id" : 42,
+  "tiempoEntrega" : 48,
+  "numPedidos" : 530,
+  "valoracion" : 4.3
+}, {
+  "id" : 44,
+  "tiempoEntrega" : 27,
+  "numPedidos" : 1220,
+  "valoracion" : 4.1
+}, {
+  "id" : 45,
+  "tiempoEntrega" : 30,
+  "numPedidos" : 1100,
+  "valoracion" : 4.4
+}, {
+  "id" : 47,
+  "tiempoEntrega" : 23,
+  "numPedidos" : 690,
+  "valoracion" : 4.8
+}, {
+  "id" : 48,
+  "tiempoEntrega" : 41,
+  "numPedidos" : 520,
+  "valoracion" : 4.5
+}, {
+  "id" : 50,
+  "tiempoEntrega" : 19,
+  "numPedidos" : 870,
+  "valoracion" : 4.3
+}, {
+  "id" : 52,
+  "tiempoEntrega" : 36,
+  "numPedidos" : 960,
+  "valoracion" : 4.7
+}, {
+  "id" : 54,
+  "tiempoEntrega" : 49,
+  "numPedidos" : 430,
+  "valoracion" : 4.2
+}, {
+  "id" : 56,
+  "tiempoEntrega" : 28,
+  "numPedidos" : 740,
+  "valoracion" : 4.6
+}, {
+  "id" : 57,
+  "tiempoEntrega" : 33,
+  "numPedidos" : 690,
+  "valoracion" : 4.1
+}, {
+  "id" : 59,
+  "tiempoEntrega" : 17,
+  "numPedidos" : 1400,
+  "valoracion" : 4.8
+}, {
+  "id" : 60,
+  "tiempoEntrega" : 26,
+  "numPedidos" : 830,
+  "valoracion" : 4.3
+}, {
+  "id" : 61,
+  "tiempoEntrega" : 21,
+  "numPedidos" : 950,
+  "valoracion" : 4.0
+}, {
+  "id" : 63,
+  "tiempoEntrega" : 34,
+  "numPedidos" : 670,
+  "valoracion" : 4.5
+}, {
+  "id" : 64,
+  "tiempoEntrega" : 22,
+  "numPedidos" : 880,
+  "valoracion" : 4.6
+}, {
+  "id" : 66,
+  "tiempoEntrega" : 23,
+  "numPedidos" : 720,
+  "valoracion" : 4.4
+}, {
+  "id" : 68,
+  "tiempoEntrega" : 31,
+  "numPedidos" : 910,
+  "valoracion" : 4.3
+}, {
+  "id" : 69,
+  "tiempoEntrega" : 46,
+  "numPedidos" : 560,
+  "valoracion" : 4.1
+}, {
+  "id" : 70,
+  "tiempoEntrega" : 29,
+  "numPedidos" : 1000,
+  "valoracion" : 4.5
+}, {
+  "id" : 72,
+  "tiempoEntrega" : 37,
+  "numPedidos" : 860,
+  "valoracion" : 4.9
+}, {
+  "id" : 74,
+  "tiempoEntrega" : 18,
+  "numPedidos" : 780,
+  "valoracion" : 4.2
+}, {
+  "id" : 75,
+  "tiempoEntrega" : 27,
+  "numPedidos" : 840,
+  "valoracion" : 4.6
+}, {
+  "id" : 77,
+  "tiempoEntrega" : 32,
+  "numPedidos" : 620,
+  "valoracion" : 4.3
+}, {
+  "id" : 79,
+  "tiempoEntrega" : 38,
+  "numPedidos" : 590,
+  "valoracion" : 4.2
+}, {
+  "id" : 80,
+  "tiempoEntrega" : 35,
+  "numPedidos" : 940,
+  "valoracion" : 4.4
+} ]

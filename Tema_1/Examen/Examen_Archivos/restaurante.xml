@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<restaurante>
+    <comida>
+        <nombre>BurgerMax</nombre>
+        <tipoComida>Hamburguesas</tipoComida>
+        <descripcion>Cadena popular con reparto rápido</descripcion>
+    </comida>
+    <comida>
+        <nombre>PizzaBoom</nombre>
+        <tipoComida>Pizzería</tipoComida>
+        <descripcion>Pizzas artesanas al horno de piedra</descripcion>
+    </comida>
+    <comida>
+        <nombre>GreenBowl</nombre>
+        <tipoComida>Saludable</tipoComida>
+        <descripcion>Especialistas en ensaladas frescas</descripcion>
+    </comida>
+    <comida>
+        <nombre>DragonWok</nombre>
+        <tipoComida>China</tipoComida>
+        <descripcion>Comida asiática con sabores intensos</descripcion>
+    </comida>
+    <comida>
+        <nombre>TacoRanch</nombre>
+        <tipoComida>Mexicana</tipoComida>
+        <descripcion>Tacos y burritos tradicionales</descripcion>
+    </comida>
+    <comida>
+        <nombre>BBQKing</nombre>
+        <tipoComida>Barbacoa</tipoComida>
+        <descripcion>Carnes ahumadas estilo americano</descripcion>
+    </comida>
+    <comida>
+        <nombre>SushiFresh</nombre>
+        <tipoComida>Japonesa</tipoComida>
+        <descripcion>Sushi preparado al momento</descripcion>
+    </comida>
+    <comida>
+        <nombre>LaPastaBella</nombre>
+        <tipoComida>Italiana</tipoComida>
+        <descripcion>Pastas frescas y salsas caseras</descripcion>
+    </comida>
+    <comida>
+        <nombre>WrapTime</nombre>
+        <tipoComida>FastFood</tipoComida>
+        <descripcion>Wraps y snacks saludables</descripcion>
+    </comida>
+    <comida>
+        <nombre>UrbanBurgers</nombre>
+        <tipoComida>Hamburguesas</tipoComida>
+        <descripcion>Hamburguesas gourmet</descripcion>
+    </comida>
+    <comida>
+        <nombre>HotDogExpress</nombre>
+        <tipoComida>FastFood</tipoComida>
+        <descripcion>Perritos calientes estilo NY</descripcion>
+    </comida>
+    <comida>
+        <nombre>CrispyChicken</nombre>
+        <tipoComida>Pollo</tipoComida>
+        <descripcion>Cadena especializada en pollo crujiente</descripcion>
+    </comida>
+    <comida>
+        <nombre>KebabHouse</nombre>
+        <tipoComida>Turca</tipoComida>
+        <descripcion>Kebabs y durum artesanales</descripcion>
+    </comida>
+    <comida>
+        <nombre>PaellaMar</nombre>
+        <tipoComida>Española</tipoComida>
+        <descripcion>Especialidad en arroces y mariscos</descripcion>
+    </comida>
+    <comida>
+        <nombre>CoffeeCity</nombre>
+        <tipoComida>Café</tipoComida>
+        <descripcion>Cafetería moderna con repostería casera</descripcion>
+    </comida>
+    <comida>
+        <nombre>VeggieWorld</nombre>
+        <tipoComida>Vegetariana</tipoComida>
+        <descripcion>Opciones veganas y vegetarianas</descripcion>
+    </comida>
+    <comida>
+        <nombre>DonerTime</nombre>
+        <tipoComida>Turca</tipoComida>
+        <descripcion>Döner y platos mediterráneos</descripcion>
+    </comida>
+    <comida>
+        <nombre>PokeWave</nombre>
+        <tipoComida>Hawaiana</tipoComida>
+        <descripcion>Poké bowls personalizados</descripcion>
+    </comida>
+    <comida>
+        <nombre>FusionBite</nombre>
+        <tipoComida>Fusión</tipoComida>
+        <descripcion>Recetas innovadoras de múltiples culturas</descripcion>
+    </comida>
+    <comida>
+        <nombre>ThaiFlavor</nombre>
+        <tipoComida>Tailandesa</tipoComida>
+        <descripcion>Platos tailandeses auténticos</descripcion>
+    </comida>
+    <comida>
+        <nombre>PapaPatata</nombre>
+        <tipoComida>FastFood</tipoComida>
+        <descripcion>Patatas fritas gourmet y salsas caseras</descripcion>
+    </comida>
+    <comida>
+        <nombre>RamenBox</nombre>
+        <tipoComida>Japonesa</tipoComida>
+        <descripcion>Especialistas en ramen tradicional</descripcion>
+    </comida>
+    <comida>
+        <nombre>ExpressWings</nombre>
+        <tipoComida>Pollo</tipoComida>
+        <descripcion>Alitas de pollo picantes</descripcion>
+    </comida>
+    <comida>
+        <nombre>GyrosPoint</nombre>
+        <tipoComida>Griega</tipoComida>
+        <descripcion>Comida mediterránea y gyros</descripcion>
+    </comida>
+    <comida>
+        <nombre>BurritoStop</nombre>
+        <tipoComida>Mexicana</tipoComida>
+        <descripcion>Burritos XXL con ingredientes frescos</descripcion>
+    </comida>
+    <comida>
+        <nombre>CurrySoul</nombre>
+        <tipoComida>India</tipoComida>
+        <descripcion>Curries caseros y especias auténticas</descripcion>
+    </comida>
+    <comida>
+        <nombre>SeaBites</nombre>
+        <tipoComida>Mariscos</tipoComida>
+        <descripcion>Pescado frito y mariscos variados</descripcion>
+    </comida>
+    <comida>
+        <nombre>PizzaStreet</nombre>
+        <tipoComida>Pizzería</tipoComida>
+        <descripcion>Pizzas rápidas estilo callejero</descripcion>
+    </comida>
+    <comida>
+        <nombre>BurgerNight</nombre>
+        <tipoComida>Hamburguesas</tipoComida>
+        <descripcion>Hamburguesas premium nocturnas</descripcion>
+    </comida>
+    <comida>
+        <nombre>SaladHub</nombre>
+        <tipoComida>Saludable</tipoComida>
+        <descripcion>Ensaladas con ingredientes locales</descripcion>
+    </comida>
+    <comida>
+        <nombre>KoreanGrill</nombre>
+        <tipoComida>Coreana</tipoComida>
+        <descripcion>Barbacoa coreana tradicional</descripcion>
+    </comida>
+    <comida>
+        <nombre>ChurroTime</nombre>
+        <tipoComida>Postres</tipoComida>
+        <descripcion>Churros y chocolate caliente</descripcion>
+    </comida>
+    <comida>
+        <nombre>PaneVivo</nombre>
+        <tipoComida>Italiana</tipoComida>
+        <descripcion>Panes artesanos y focaccias</descripcion>
+    </comida>
+    <comida>
+        <nombre>SteakPlace</nombre>
+        <tipoComida>Carne</tipoComida>
+        <descripcion>Cortes de carne a la brasa</descripcion>
+    </comida>
+    <comida>
+        <nombre>ArepaBoom</nombre>
+        <tipoComida>Venezolana</tipoComida>
+        <descripcion>Arepas rellenas variadas</descripcion>
+    </comida>
+    <comida>
+        <nombre>NoodleExpress</nombre>
+        <tipoComida>Asiática</tipoComida>
+        <descripcion>Fideos rápidos al estilo asiático</descripcion>
+    </comida>
+    <comida>
+        <nombre>SmoothieLand</nombre>
+        <tipoComida>Bebidas</tipoComida>
+        <descripcion>Batidos naturales y smoothies</descripcion>
+    </comida>
+    <comida>
+        <nombre>PastaDrive</nombre>
+        <tipoComida>Italiana</tipoComida>
+        <descripcion>Pasta para llevar en minutos</descripcion>
+    </comida>
+    <comida>
+        <nombre>SandwichClub</nombre>
+        <tipoComida>Sándwiches</tipoComida>
+        <descripcion>Sándwiches gourmet variados</descripcion>
+    </comida>
+    <comida>
+        <nombre>TapasBar</nombre>
+        <tipoComida>Española</tipoComida>
+        <descripcion>Tapas tradicionales con toque moderno</descripcion>
+    </comida>
+    <comida>
+        <nombre>WafflePoint</nombre>
+        <tipoComida>Postres</tipoComida>
+        <descripcion>Waffles dulces y salados</descripcion>
+    </comida>
+    <comida>
+        <nombre>CrepeHouse</nombre>
+        <tipoComida>Postres</tipoComida>
+        <descripcion>Crepes franceses artesanales</descripcion>
+    </comida>
+    <comida>
+        <nombre>EmpanadaCity</nombre>
+        <tipoComida>Argentina</tipoComida>
+        <descripcion>Empanadas al horno de muchos sabores</descripcion>
+    </comida>
+    <comida>
+        <nombre>GrillMaster</nombre>
+        <tipoComida>Carne</tipoComida>
+        <descripcion>Parrilla y cortes al carbón</descripcion>
+    </comida>
+    <comida>
+        <nombre>UrbanTaco</nombre>
+        <tipoComida>Mexicana</tipoComida>
+        <descripcion>Tacos urbanos estilo moderno</descripcion>
+    </comida>
+    <comida>
+        <nombre>HaruSushi</nombre>
+        <tipoComida>Japonesa</tipoComida>
+        <descripcion>Sushi premium a domicilio</descripcion>
+    </comida>
+    <comida>
+        <nombre>BreadCorner</nombre>
+        <tipoComida>Panadería</tipoComida>
+        <descripcion>Pan casero y bollería fresca</descripcion>
+    </comida>
+    <comida>
+        <nombre>FalafelKing</nombre>
+        <tipoComida>Vegetariana</tipoComida>
+        <descripcion>Falafel artesanal y hummus</descripcion>
+    </comida>
+    <comida>
+        <nombre>GoPita</nombre>
+        <tipoComida>Griega</tipoComida>
+        <descripcion>Pitas y ensaladas mediterráneas</descripcion>
+    </comida>
+    <comida>
+        <nombre>CurryFast</nombre>
+        <tipoComida>India</tipoComida>
+        <descripcion>Platos indios rápidos</descripcion>
+    </comida>
+    <comida>
+        <nombre>TexMexRoad</nombre>
+        <tipoComida>TexMex</tipoComida>
+        <descripcion>Comida tex-mex abundante</descripcion>
+    </comida>
+</restaurante>
