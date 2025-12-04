@@ -1,4 +1,4 @@
--*package Ejercicios.GeneradorRandom;
+package Ejercicios.GeneradorRandom;
 
 import java.util.Random;
 
